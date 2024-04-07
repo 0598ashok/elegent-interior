@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: poppins !important;
+}
 
 .floating-icons {
   position: fixed;
@@ -97,4 +102,46 @@ code {
   transform: translate(-50%, -50%);
   z-index: 9999;
   /* Add any other styling for your preloader container */
+}
+
+
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrapper .loader{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.loader .loading{
+  background: #ff9232;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 0 10px;
+  animation: load 0.7s ease infinite;
+}
+.loader .loading.one{
+  animation-delay: 0.3s;
+}
+.loader .loading.two{
+  animation-delay: 0.4s;
+}
+.loader .loading.three{
+  animation-delay: 0.5s;
+}
+@keyframes load{
+  0%{
+      width: 30px;
+      height: 30px;
+  }
+  50%{
+      width: 20px;
+      height: 20px;
+  }
 }

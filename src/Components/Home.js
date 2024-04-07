@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import { ToastContainer, toast , Zoom} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Home.css";
 import Footer from "./Footer";
 import AOS from "aos";
@@ -15,15 +16,90 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init(); // Initialize AOS
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+ 
+    }, 1500);
   }, []);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    mobileNumber: "",
+    email: "",
+    message: "",
+  });
+
+ 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Form validation: Check if all required fields are filled out
+    if (
+      !formData.name ||
+      !formData.mobileNumber ||
+      !formData.email ||
+      !formData.message
+    ) {
+      toast.error("Please fill out all required fields");
+      return;
+    }
+  
+
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbycENHpK4x06rTrfUmUveNnpanBqJtr-qwkG2BwkO9RtvOF6j8oLiqQQdXpBn5mCmwe/exec";
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      console.log(response);
+
+      if (response.ok) {
+        toast.success("Thanks! We'll get back to you soon");
+        setFormData({
+          name: "",
+          mobileNumber: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+  
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  console.log(formData);
   return (
     <>
+      <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={true}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    transition={Zoom}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
       {loading ? ( // Conditionally render the preloader while loading
-        // <Preloader />
+        // 
         <div className="preloader-container">
-          <p>Loading ....</p>
+          {/* <p>Loading ....</p> */}
+          <Preloader />
         </div>
       ) : (
         <div>
@@ -33,12 +109,12 @@ const Home = () => {
                 onClick={() => (window.location.href = "tel:+919491178402")}
                 className="red_fixed_button"
               >
-                <i className="fa-solid fa-phone-volume"></i> Call Now
+                <i class="ri-phone-fill"></i> Call Now
               </button>
             </a>
             <a href="https://wa.me/+919491178402" className="icon">
               <button className="ml-2 green_fixed_button ">
-                <i class="fa-brands fa-whatsapp "></i> Whatsapp
+                <i class="ri-whatsapp-line"></i> Whatsapp
               </button>
             </a>
           </div>
@@ -258,7 +334,7 @@ const Home = () => {
                 <div class="col-md-4">
                   <div class="card home_service_card">
                     <div data-aos="fade-up" data-aos-duration="2000">
-                      <i class="fas fa-thin fa-kitchen-set"></i>
+                      <i class="ri-bowl-fill"></i>
                       <h3>MODULAR KITCHEN</h3>
                       <p>
                         Now into Interiors with Modular Kitchen. Our team
@@ -284,7 +360,7 @@ const Home = () => {
                 <div class="col-md-4">
                   <div class="card home_service_card">
                     <div data-aos="fade-up" data-aos-duration="2000">
-                      <i class="fas fa-solid fa-utensils"></i>
+                      <i class="ri-restaurant-line"></i>
                       <h3>DINING ROOM</h3>
                       <p>
                         Our team specialize in creating eclectic dining areas
@@ -354,42 +430,42 @@ const Home = () => {
                   <ul>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>On-site
+                        <i class="ri-check-double-line"></i>On-site
                         Consultations
                       </div>
                     </li>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>Project Survey &
+                        <i class="ri-check-double-line"></i>Project Survey &
                         Analysis
                       </div>
                     </li>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>Design
+                        <i class="ri-check-double-line"></i>Design
                         Conceptualization
                       </div>
                     </li>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>Custom Designs
+                        <i class="ri-check-double-line"></i>Custom Designs
                       </div>
                     </li>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>Finishes &
+                        <i class="ri-check-double-line"></i>Finishes &
                         Furnishings
                       </div>
                     </li>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>Purchasing,
-                        Delivery & Installation
+                        <i class="ri-check-double-line"></i>Purchasing, Delivery
+                        & Installation
                       </div>
                     </li>
                     <li>
                       <div data-aos="fade-up" data-aos-duration="2000">
-                        <i class="fa-solid fa-check-double"></i>Project
+                        <i class="ri-check-double-line"></i>Project
                         Co-ordination & Management
                       </div>
                     </li>
@@ -406,24 +482,36 @@ const Home = () => {
                 <div class="card">
                   <div class="row">
                     <div class="col-md-8">
-                      <form>
+                      <form onSubmit={handleSubmit}>
                         <h1 class="pb-4">Get In Touch</h1>
-                        <input
+                          <input
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
                           type="text"
                           placeholder="Name*"
                           class="form-control form_control"
                         />
-                        <input
+                          <input
+                            name="mobileNumber"
+                            value={formData.mobileNumber}
+                            onChange={handleChange}
                           type="number"
                           placeholder="Contact Number*"
                           class="form-control form_control"
                         />
-                        <input
+                          <input
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                           type="email"
                           placeholder="Email*"
                           class="form-control form_control"
                         />
-                        <textarea
+                          <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                           class="form-control form_control"
                           rows="3"
                           placeholder="message*"

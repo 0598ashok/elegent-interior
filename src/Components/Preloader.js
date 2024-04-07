@@ -3,11 +3,14 @@ import './Home.css'
 
 const Preloader = () => {
   return (
-    <div className="preloader">
-      <div className="spinner-border text-primary" role="status">
-        <span className="sr-only">Loading...</span>
-      </div>
-    </div>
+    <section class="wrapper">
+        <div class="loader">
+            <div class="loading one"></div>
+            <div class="loading two"></div>
+            <div class="loading three"></div>
+            <div class="loading four"></div>
+        </div>
+    </section>
   );
 };
 

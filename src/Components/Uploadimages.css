@@ -1,0 +1,36 @@
+.active-tab{
+    background-color: #ff9202;
+    border: 1px solid #ff9202;
+    border-radius: 5px;
+    color: #fff;
+    font-family: poppins !important;
+    padding: 7px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.no-button{
+    background-color: lightgray;
+    border: none;
+    /* border: 1px solid #ff9202; */
+    border-radius: 5px;
+    color: #000;
+    width: 100%;
+    font-family: poppins !important;
+    padding: 7px 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.upload_button{
+color: #ffffff;
+border: none;
+background-color: #d8b674;
+padding: 10px 0px;
+background-image: -webkit-linear-gradient(left, #d8b674 0%, #b28e60 50%, #cdbb96 100%);
+/* background-image: linear-gradient(to right, #d8b674 0%, #574531 50%, #d8b674 100%); */
+-webkit-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+background-size: 200% 100%;
+}

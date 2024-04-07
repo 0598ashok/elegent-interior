@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { imageDB } from "./config";
+import "./Uploadimages.css";
 import {
   getDownloadURL,
   listAll,
@@ -122,14 +123,14 @@ function UploadImages() {
     console.log("Selected dropdown value:", e.target.value);
   };
 
- console.log("all urls",imgUrl)
+  console.log("all urls", imgUrl);
 
   return (
     <div className="mt-5">
       {/* Input fields */}
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
-          <div className=" col-md-3 res_col_3">
+          <div className=" col-md-4 res_col_3">
             <input
               type="text"
               value={title}
@@ -138,7 +139,7 @@ function UploadImages() {
               className="form-control"
             />
           </div>
-          <div className=" col-md-3 res_col_3">
+          <div className=" col-md-4 res_col_3">
             <select className="form-control" onChange={handleSelectChange}>
               {/* Dropdown options */}
               {tabs.map((eachTab) => (
@@ -148,19 +149,22 @@ function UploadImages() {
               ))}
             </select>
           </div>
-          <div className="col-md-3 res_col_3">
+          <div className="col-md-4 res_col_3">
             <input
               type="file"
               onChange={(e) => setImg(e.target?.files[0])}
-              className="form-control upload_file"
+              className="form-control upload_file p-1"
             />
           </div>
-          <div className="col-md-3">
-            <button onClick={handleClick} className="btn btn-primary w-100">
+           
+        </div>
+        <div className="row mt-3">
+        <div className="col-12 text-center">
+            <button onClick={handleClick} className=" w-25 upload_button">
               <i class="ri-upload-cloud-line mr-3"></i>
               Upload
             </button>
-          </div>
+          </div> 
         </div>
       </div>
 
@@ -171,13 +175,14 @@ function UploadImages() {
             <div
               key={eachTab.tabId}
               onClick={handleChangeTab}
-              className={`col-6 col-md-3 bg-primary p-2  ${
-                activeTabId === eachTab.tabId ? "active-tab" : ""
-              }`}
+              className={`col-6 col-md-3  `}
             >
               <button
                 value={eachTab.tabId}
-                className="no-button"
+                className={`  ${
+                  activeTabId === eachTab.tabId ? "active-tab" : "no-button"
+                }`}
+                // className="no-button active"
                 onClick={handleChangeTab}
               >
                 {eachTab.label}
@@ -191,29 +196,36 @@ function UploadImages() {
       {loading ? (
         <div class="spinner-border text-warning mt-5"></div>
       ) : (
-        <ul
-          className="d-flex flex-row flex-wrap p-0 pt-5"
-          style={{ listStyleType: "none" }}
-        >
+        <ul className="container p-0 pt-5" style={{ listStyleType: "none" }}>
           {/* Image display */}
-          {imgUrl
-            .filter(
-              (image) => image.category === activeTabId || activeTabId === "ALL"
-            )
-            .map((data, index) => (
-              <li key={index} className="card d-flex flex-column m-2">
-                <img src={data.url} className="w-100" alt="img" />
-                <div className="d-flex flex-row justify-content-between align-items-center pt-3 p-2">
-                  <p>{data.title}</p>
-                  <button
-                    onClick={() => handleDelete(data.url)}
-                    className="btn btn-warning"
-                  >
-                    <i class="ri-delete-bin-6-line ml-3"></i>
-                  </button>
-                </div>
-              </li>
-            ))}
+          <div className="row">
+            {imgUrl
+              .filter(
+                (image) =>
+                  image.category === activeTabId || activeTabId === "ALL"
+              )
+              .map((data, index) => (
+                <li key={index} className=" col-12 col-sm-6 col-lg-4 mt-2">
+                  <div style={{ border: "1px solid #8a8a8a" }} className="p-2">
+                    <img
+                      src={data.url}
+                      className="w-100"
+                      alt="img"
+                      style={{ height: "400px" }}
+                    />
+                    <div className="d-flex flex-row justify-content-between align-items-center pt-3">
+                      <p>{data.title}</p>
+                      <button
+                        onClick={() => handleDelete(data.url)}
+                        className="btn btn-warning"
+                      >
+                        <i class="ri-delete-bin-6-line "></i>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              ))}
+          </div>
         </ul>
       )}
     </div>
