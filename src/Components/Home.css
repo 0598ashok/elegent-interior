@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: #ffffff;
+}
+/* Navbar  */
+
+/* Navbar  */
+
+/* home_sec1  */
+.carousel-caption {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Optionally adjust color */
+  text-align: center; /* Optionally adjust text alignment */
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .carousel-caption {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-caption h3 {
+    color: red;
+  }
+}
+
+.carousel-item img {
+  height: 85vh;
+}
+/* home_sec1  */
+
+/* Home _sec 2  */
+.home_sec2 {
+  padding: 100px 0px;
+  background-image: url("../../public/images/bg_texture.jpg");
+}
+
+.home_sec2 p {
+  font-family: poppins !important;
+  text-align: center;
+  color: #8a8a8a;
+  line-height: 2rem;
+}
+
+.home_sec2 button {
+  background-color: #ff9202;
+  border: 1px solid #ff9202;
+  border-radius: 5px;
+  color: #fff;
+  font-family: poppins !important;
+  padding: 7px 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* Home _sec 2  */
+
+/* Home _sec 02  */
+.home_sec02 {
+  padding: 100px 0px;
+  background-image: url("../../public/images/bg_texture.jpg");
+  font-family: poppins !important;
+  text-align: center;
+}
+
+.home_sec02 i {
+  font-size: 35px;
+  color: #ff9202;
+}
+.home_sec02 p {
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+}
+/* Home _sec 02  */
+
+/* Home _sec 3  */
+
+.home_sec3 {
+  padding: 100px 0px;
+  background-image: url("../../public/images/bg_texture.jpg");
+}
+
+.profile-card-5 {
+  margin-top: 20px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  height: 250px;
+}
+.profile-card-5 .btn {
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 7px 20px;
+}
+.profile-card-5 .card-img-block {
+  width: 91%;
+  margin: 0 auto;
+  position: relative;
+  top: -40px;
+}
+.profile-card-5 .card-img-block img {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+.profile-card-5 h5 {
+  color: #000;
+  font-family: poppins !important;
+  font-weight: 500;
+  text-align: center;
+  font-size: 17px;
+  text-transform: lowercase;
+}
+.card-img-block img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-block:hover img {
+  transform: scale(1.1);
+}
+/* Home _sec 3  */
+
+/* Home _sec 4   */
+
+.home_sec4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://png.pngtree.com/thumb_back/fw800/background/20230720/pngtree-modern-house-living-room-interior-sketch-design-and-3d-rendering-image_3710890.jpg)
+      no-repeat center center;
+  height: auto;
+  padding: 100px 0px;
+  font-family: poppins !important;
+}
+.home_service_card {
+  padding: 50px 10px;
+  text-align: center;
+  background: transparent;
+  border: 1px dotted #ff9202;
+  cursor: pointer;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_service_card i {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.home_service_card h3 {
+  font-family: poppins !important;
+  text-transform: lowercase;
+  padding-top: 20px;
+  color: #ffffff;
+}
+
+.home_service_card p {
+  font-family: poppins !important;
+  text-transform: capitalize;
+  padding-top: 20px;
+  color: #ffffff;
+}
+
+.home_service_card:hover {
+  padding: 50px 10px;
+  text-align: center;
+  background: #ff92025c;
+  border: 1px dotted #ff9202;
+  transition: 0.7s;
+}
+
+/* Home _sec 4   */
+
+/* Home _sec 5   */
+.home_sec5 {
+  background-image: url("../../public/images/bg_texture.jpg");
+  padding: 100px 0px;
+}
+
+.home_sec5 img {
+  width: 80%;
+  margin: auto;
+}
+
+.home_sec5 ul {
+  padding-left: 0px !important;
+}
+
+.home_sec5 ul li {
+  list-style-type: none;
+  padding-top: 13px;
+}
+
+.home_sec5 ul li i {
+  color: #ff9202;
+  padding-right: 20px;
+}
+
+.home_sec5 button {
+  margin-top: 25px;
+  background-color: #ff9202;
+  color: #ffffff;
+  border: 1px solid #ff9202;
+  padding: 7px 25px;
+  border-radius: 5px;
+  font-family: poppins !important;
+}
+
+/* Home _sec 5   */
+
+/* Home _sec6 */
+
+.home_sec6 {
+  font-family: poppins !important;
+  padding: 100px 0px;
+}
+.home_sec6 .card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.home_sec6 .form_control {
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid #bbbaba;
+  height: 50px;
+}
+.home_sec6 textarea {
+  height: 100px !important;
+}
+.home_sec6 form {
+  padding: 70px 20px;
+}
+.home_sec6 .form_control:focus {
+  box-shadow: none !important;
+}
+
+.home_sec6 button {
+  margin-top: 25px;
+  background-color: #ff9202;
+  color: #ffffff;
+  border: 1px solid #ff9202;
+  padding: 7px 25px;
+  border-radius: 5px;
+}
+
+.home_sec6 img {
+  height: -webkit-fill-available;
+}
+
+/* Home _sec6 */
+
+.banner1 {
+  background-image: url("../../public/images/banner1.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: poppins !important;
+  text-align: center;
+}
+
+.banner2 {
+  background-image: url("../../public/images/banner2.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: poppins !important;
+  text-align: center;
+}
+
+.banner3 {
+  background-image: url("../../public/images/banner3.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: poppins !important;
+  text-align: center;
+}
+
+
+.home-container {
+  position: relative;
+  /* Add any other styling for your container */
+}
+
+.preloader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  /* Add any other styling for your preloader container */
+}

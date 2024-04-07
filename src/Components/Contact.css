@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.contact_sec1 {
+  /* background-image: url("../../public/images/contact_banner.png"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/images/contact_banner.png");
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: poppins !important;
+  color: #fff;
+}
+
+/* Home _sec6 */
+
+.home_sec6 {
+  font-family: poppins !important;
+  padding: 100px 0px;
+}
+.home_sec6 .card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.home_sec6 .form_control {
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid #bbbaba;
+  height: 50px;
+}
+.home_sec6 textarea {
+  height: 100px !important;
+}
+.home_sec6 form {
+  padding: 70px 20px;
+}
+.home_sec6 .form_control:focus {
+  box-shadow: none !important;
+}
+
+.home_sec6 button {
+  margin-top: 25px;
+  background-color: #ff9202;
+  color: #ffffff;
+  border: 1px solid #ff9202;
+  padding: 7px 25px;
+  border-radius: 5px;
+}
+
+.home_sec6 img {
+  height: -webkit-fill-available;
+}
+
+/* Home _sec6 */
+
+.contact_sec2 {
+  text-align: center;
+  font-family: poppins !important;
+}
