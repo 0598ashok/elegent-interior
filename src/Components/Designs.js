@@ -9,6 +9,7 @@ import Footer from "./Footer";
 
 const Designs = () => {
   const [loading, setLoading] = useState(true);
+  const [category, setCategory] = useState("SPACE_SAVING");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,6 +20,12 @@ const Designs = () => {
       setLoading(false);
     }, 1500);
   }, []);
+
+  useEffect(() => {
+     // Set loading to true when changing categories
+    setCurrentPage(1); // Reset current page to 1 when changing categories
+    fetchImages(); // Fetch images for the new category
+  }, [category]);
 
   const [imgUrl, setImgUrl] = useState([]);
   // const [loading, setLoading] = useState(true);
@@ -131,7 +138,8 @@ const Designs = () => {
                       type="button"
                       role="tab"
                       aria-controls="v-pills-home"
-                      aria-selected="true"
+                        aria-selected="true"
+                        onClick={()=>{setCategory("Space Living")}}
                     >
                       Space Living
                     </button>
@@ -143,7 +151,8 @@ const Designs = () => {
                       type="button"
                       role="tab"
                       aria-controls="v-pills-profile"
-                      aria-selected="false"
+                        aria-selected="false"
+                        onClick={()=>{setCategory("Living")}}
                     >
                       Living
                     </button>
@@ -155,7 +164,8 @@ const Designs = () => {
                       type="button"
                       role="tab"
                       aria-controls="v-pills-messages"
-                      aria-selected="false"
+                        aria-selected="false"
+                        onClick={()=>{setCategory("Bedroom")}}
                     >
                       Bedroom
                     </button>
@@ -167,7 +177,8 @@ const Designs = () => {
                       type="button"
                       role="tab"
                       aria-controls="v-pills-settings"
-                      aria-selected="false"
+                        aria-selected="false"
+                        onClick={()=>{setCategory("Kitchen")}}
                     >
                       Kitchen
                     </button>

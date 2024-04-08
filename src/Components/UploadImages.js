@@ -126,7 +126,7 @@ function UploadImages() {
   console.log("all urls", imgUrl);
 
   return (
-    <div className="mt-5">
+    <div className="" style={{marginTop:"140px"}}>
       {/* Input fields */}
       <div className="container">
         <div className="row">
