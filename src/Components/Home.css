@@ -8,24 +8,11 @@ body {
 /* Navbar  */
 
 /* home_sec1  */
-.carousel-caption {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; /* Optionally adjust color */
-  text-align: center; /* Optionally adjust text alignment */
-}
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
-  .carousel-caption {
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-
-  .carousel-caption h3 {
-    color: red;
+  .carousel-item h1 {
+    color: #fff;
+    font-size: 25px;
   }
 }
 
@@ -265,6 +252,7 @@ body {
   color: #fff;
   font-family: poppins !important;
   text-align: center;
+  margin-top: 90px;
 }
 
 .banner2 {
@@ -278,6 +266,7 @@ body {
   color: #fff;
   font-family: poppins !important;
   text-align: center;
+  margin-top: 90px;
 }
 
 .banner3 {
@@ -291,8 +280,8 @@ body {
   color: #fff;
   font-family: poppins !important;
   text-align: center;
+  margin-top: 90px;
 }
-
 
 .home-container {
   position: relative;

@@ -5,6 +5,7 @@ import { ref, listAll, getDownloadURL, getMetadata } from "firebase/storage";
 import Navbar from "./Navbar";
 import { Pagination } from "antd";
 import Preloader from "./Preloader";
+import Footer from "./Footer";
 
 const Designs = () => {
   const [loading, setLoading] = useState(true);
@@ -269,10 +270,11 @@ const Designs = () => {
                 </div>
               </div>
             </section>
+            <Footer/>
           </div>
         </>
       )}
-      ;
+      
     </>
   );
 };

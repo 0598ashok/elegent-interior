@@ -19,7 +19,7 @@ function Header() {
     <header className="header fixed-top">
       <div className="container">
         <NavLink exact to="/" className="logo">
-          logo
+          <img src="./images/logo.png" />
         </NavLink>
         <input
           className="menu-btn"

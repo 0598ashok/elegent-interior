@@ -20,7 +20,7 @@ const App = () => {
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/designs" element={<Designs />} />
-          <Route exact path="/upload" element={<UploadImages/>}/>
+          <Route exact path="/9491178402" element={<UploadImages/>}/>
         </Routes>
       </BrowserRouter>
     </div>

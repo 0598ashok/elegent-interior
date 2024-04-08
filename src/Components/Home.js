@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Preloader from "./Preloader";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -467,7 +468,9 @@ const Home = () => {
                       </div>
                     </li>
                   </ul>
-                  <button>Book A Free Consultation</button>
+                  <Link to="/contact">
+                    <button>Book A Free Consultation</button>
+                  </Link>
                 </div>
               </div>
             </div>

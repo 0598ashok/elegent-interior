@@ -179,7 +179,7 @@ const Contact = () => {
 
           <Footer />
         </div>
-      )};
+      )}
       </>
   );
 };
