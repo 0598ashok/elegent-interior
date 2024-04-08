@@ -223,7 +223,7 @@ const About = () => {
           <section className="about_sec4">
             <div data-aos="zoom-in" data-aos-duration="2000">
               <div className="container">
-                <h1>our accessories</h1>
+                <h1>Our Brands</h1>
                 <div className="owl-carousel">
                   <div>
                     <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/logo1.png" />

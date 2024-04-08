@@ -1,6 +1,5 @@
 .logo {
-  color: black;
-  display: inline-lock;
+width: 200px;
 }
 .header {
   background-color: #fff;
@@ -23,7 +22,8 @@
   padding: 20px 20px;
   text-decoration: none;
   color: black;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .header li a:hover,
@@ -93,7 +93,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: fit-content;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -121,6 +121,8 @@
   }
   .header li a {
     padding: 22px 14px;
+    font-size: 15px;
+    font-weight: 500;
   }
   .header .menu {
     clear: none;
@@ -130,4 +132,9 @@
   .header .menu-icon {
     display: none;
   }
+}
+
+.menu li a.active {
+  color: #ff9232; /* Change this to your desired active tab text color */
+  /* Add any other styling for the active tab here */
 }

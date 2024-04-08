@@ -19,15 +19,18 @@ code {
 
 .floating-icons {
   position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 10%;
+  right: 0%;
+  transform: translateX(-20%);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 1000;
 }
 
+.floating-icons a:hover{
+  text-decoration: none !important;
+}
 .icon {
   margin-top: 10px;
   font-size: 25px;

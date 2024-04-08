@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast , Zoom} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Home.css";
 import Footer from "./Footer";
 import AOS from "aos";
@@ -18,7 +18,6 @@ const Home = () => {
     AOS.init(); // Initialize AOS
     setTimeout(() => {
       setLoading(false);
- 
     }, 1500);
   }, []);
 
@@ -29,7 +28,6 @@ const Home = () => {
     message: "",
   });
 
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -43,7 +41,6 @@ const Home = () => {
       toast.error("Please fill out all required fields");
       return;
     }
-  
 
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbycENHpK4x06rTrfUmUveNnpanBqJtr-qwkG2BwkO9RtvOF6j8oLiqQQdXpBn5mCmwe/exec";
@@ -74,29 +71,29 @@ const Home = () => {
       console.error("Error submitting form:", error);
     }
   };
-  
-    const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  
+
   console.log(formData);
   return (
     <>
       <ToastContainer
-                    position="top-center"
-                    autoClose={1000}
-                    hideProgressBar={true}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    transition={Zoom}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="dark"
-                />
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        transition={Zoom}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       {loading ? ( // Conditionally render the preloader while loading
-        // 
+        //
         <div className="preloader-container">
           {/* <p>Loading ....</p> */}
           <Preloader />
@@ -484,34 +481,34 @@ const Home = () => {
                     <div class="col-md-8">
                       <form onSubmit={handleSubmit}>
                         <h1 class="pb-4">Get In Touch</h1>
-                          <input
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
+                        <input
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
                           type="text"
                           placeholder="Name*"
                           class="form-control form_control"
                         />
-                          <input
-                            name="mobileNumber"
-                            value={formData.mobileNumber}
-                            onChange={handleChange}
+                        <input
+                          name="mobileNumber"
+                          value={formData.mobileNumber}
+                          onChange={handleChange}
                           type="number"
                           placeholder="Contact Number*"
                           class="form-control form_control"
                         />
-                          <input
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
+                        <input
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
                           type="email"
                           placeholder="Email*"
                           class="form-control form_control"
                         />
-                          <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
                           class="form-control form_control"
                           rows="3"
                           placeholder="message*"
