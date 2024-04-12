@@ -55,7 +55,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 m-auto mt-2">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>Modular Kitchen</h3>
                     <p>
                       With the help of our professionally qualified team of
@@ -69,7 +69,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 img-wrapper mt-2">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-psd/modern-furniture-kitchen_176382-1225.jpg?w=996"
                       className="img-fluid inner-img"
@@ -82,7 +82,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 img-wrapper mt-2 order-1 order-md-0">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-photo/armchair-green-living-room-with-copy-space_43614-910.jpg?w=900"
                       className="img-fluid inner-img"
@@ -90,7 +90,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 m-auto mt-2 order-0 order-md-1">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>Interior</h3>
                     <p>
                       We provide design, supply and installation for Modular kitchen
@@ -107,7 +107,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 m-auto mt-2">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>Bedroom</h3>
                     <p>
                       Bedrooms are the primary place of relaxation, where we all
@@ -122,7 +122,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 img-wrapper mt-2">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-photo/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table_105762-1783.jpg?w=900"
                       className="img-fluid inner-img"
@@ -135,7 +135,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 img-wrapper mt-2 order-1 order-md-0">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-photo/green-sofa-white-living-room-with-free-space_43614-834.jpg?w=900"
                       className="img-fluid inner-img"
@@ -143,7 +143,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 m-auto mt-2 order-0 order-md-1">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>Living Room</h3>
                     <p>
                       The Living Room you've always wanted begins here! From classy
@@ -161,7 +161,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 m-auto mt-2">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>Furniture</h3>
                     <p>
                       Furniture's are made according to the required specifications
@@ -175,7 +175,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 img-wrapper mt-2">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-photo/gray-sofa-white-living-room-with-copy-space_43614-909.jpg?w=900"
                       className="img-fluid inner-img"
@@ -188,7 +188,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 img-wrapper mt-2 order-1 order-md-0">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-photo/3d-room-interior-with-classic-design-furniture_23-2150895589.jpg?w=826"
                       className="img-fluid inner-img"
@@ -196,7 +196,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 m-auto mt-2 order-0 order-md-1">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>Decorative Interior</h3>
                     <p>
                       The team of decorators will utilize the available space to
@@ -210,7 +210,7 @@ const Services = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 m-auto mt-2">
-                  <div data-aos="fade-right" data-aos-duration="2000">
+                  <div data-aos="fade-up" data-aos-duration="2000">
                     <h3>DINING ROOM</h3>
                     <p>
                       Our team specialize in creating eclectic dining areas with
@@ -219,7 +219,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="col-md-6 img-wrapper mt-2">
-                  <div data-aos="fade-left" data-aos-duration="2000">
+                  <div data-aos="zoom-in" data-aos-duration="2000">
                     <img
                       src="https://img.freepik.com/free-photo/room-house-decorated-with-brazilian-folklore-design_23-2150794165.jpg?w=1060"
                       className="img-fluid inner-img"

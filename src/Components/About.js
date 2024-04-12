@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./About.css";
 import AOS from "aos";
+
 import "aos/dist/aos.css";
+
+import $ from "jquery"; // Import jQuery first
+import "owl.carousel"; // Then import Owl Carousel
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import "owl.carousel";
+
 import Footer from "./Footer";
 
 import { FaKitchenSet } from "react-icons/fa6";
@@ -18,21 +22,20 @@ import Preloader from "./Preloader";
 const About = () => {
   const [loading, setLoading] = useState(true);
 
+  const owlCarouselRef = useRef(null);
+
   useEffect(() => {
-    AOS.init(); // Initialize AOS
+    AOS.init();
     setTimeout(() => {
       setLoading(false);
     }, 1500);
-  }, []);
-
-  useEffect(() => {
-    if (window.$) {
-      window.$(".owl-carousel").owlCarousel({
+    // Wait for the component to mount before initializing Owl Carousel
+    if (owlCarouselRef.current && $ && $.fn.owlCarousel) {
+      $(owlCarouselRef.current).owlCarousel({
         loop: true,
         margin: 20,
         dots: true,
         smartSpeed: 1500,
-
         autoplay: true,
         responsive: {
           0: {
@@ -46,6 +49,8 @@ const About = () => {
           },
         },
       });
+    } else {
+      console.error("Owl Carousel is not loaded properly.");
     }
   }, []);
 
@@ -82,6 +87,7 @@ const About = () => {
           <section className="about_sec1">
             <h1>About</h1>
           </section>
+
           <section className="about_sec2">
             <div className="container">
               <div className="row">
@@ -218,71 +224,171 @@ const About = () => {
             </div>
           </section>
 
-          <section className="about_sec4">
-            <div data-aos="zoom-in" data-aos-duration="2000">
-              <div className="container">
-                <h1>Our Brands</h1>
-                <div className="owl-carousel">
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/logo1.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/4-1.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/5-2.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/6-1.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/7.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/2-1.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/3-1.png" />
-                  </div>
+          {/* <section className="about_sec4">
+              <div data-aos="zoom-in" data-aos-duration="2000">
+                <div className="container">
+                  <h1>Our Brands</h1>
+                  <div className="owl-carousel" ref={owlCarouselRef}>
+                    <div>
+                      <img src="https://1000logos.net/wp-content/uploads/2021/04/Havells-logo.png" />
+                    </div>
+                    <div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Goldmedal_Electricals_Logo.svg/2560px-Goldmedal_Electricals_Logo.svg.png" />
+                    </div>
+                    <div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/2560px-Wipro_Primary_Logo_Color_RGB.svg.png" />
+                    </div>
+                    <div>
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Anchor_by_Panasonic_logo.svg/1280px-Anchor_by_Panasonic_logo.svg.png" />
+                    </div>
+                    <div>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Centuryply.png" />
+                    </div>
+                    <div>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXvOM99H1Iiq7MYZS7WO0gWDxu0wkND1_eHPSko4rGg&s" />
+                    </div>
+                    <div>
+                      <img src="https://www.sainiworld.in/cdn/shop/files/ebco_logo.jpg?v=1667644834" />
+                    </div>
 
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/whirpool.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/blapunk.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/elica.png" />
-                  </div>
-
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/06/FABER.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/blapunk.png" />
-                  </div>
-                  <div>
-                    <img src="https://elegant-interiors.in/wp-content/uploads/2021/05/KAFF.png" />
+                    <div>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmoQ0uMRofglBjZQSQt65MSiQMCeWOA8DofYTlVCpUZw&s" />
+                    </div>
+                    <div>
+                      <img src="https://1000logos.net/wp-content/uploads/2017/12/Hitachi-Logo.png" />
+                    </div>
                   </div>
                 </div>
+              </div>
+            </section> */}
+
+          <section className="about_sec4">
+            <div className="container ">
+              <h1>Our Brands</h1>
+              <div className="row">
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://1000logos.net/wp-content/uploads/2021/04/Havells-logo.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Goldmedal_Electricals_Logo.svg/2560px-Goldmedal_Electricals_Logo.svg.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://www.wipro.com/content/dam/nexus/en/brand/images/secondary-logo-400x276.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Anchor_by_Panasonic_logo.svg/1280px-Anchor_by_Panasonic_logo.svg.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/16/Centuryply.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://seeklogo.com/images/G/greenply-logo-469D8F2DFE-seeklogo.com.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row mt-5">
+                <div className="col-md-2 mt-2 col-12 col-sm-6 col_02"></div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXvOM99H1Iiq7MYZS7WO0gWDxu0wkND1_eHPSko4rGg&s"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://www.sainiworld.in/cdn/shop/files/ebco_logo.jpg?v=1667644834"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmoQ0uMRofglBjZQSQt65MSiQMCeWOA8DofYTlVCpUZw&s"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 mt-2 col-12 col-sm-6">
+                  <div className="card brand_cards">
+                    <div>
+                      <img
+                        src="https://1000logos.net/wp-content/uploads/2017/12/Hitachi-Logo.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-2 col-12 col-sm-6 mt-2 col_02"></div>
               </div>
             </div>
           </section>
 
           {/* <section>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-2">
-                  <div className="card cardss">
-                    <img
-                      src="https://elegant-interiors.in/wp-content/uploads/2021/05/logo1.png"
-                      className="img-fluid"
-                    />
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-2">
+                    <div className="card cardss">
+                      <img
+                        src="https://elegant-interiors.in/wp-content/uploads/2021/05/logo1.png"
+                        className="img-fluid"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section> */}
+              </div>  
+            </section> */}
 
           <Footer />
         </div>

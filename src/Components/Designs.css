@@ -58,6 +58,6 @@
   .ant-pagination-item-active {
   color: #fff !important;
   font-weight: 600;
-  background-color: #ff9232;
+  background-color: #ff9232 !important;
   border-color: #fff !important;
 }

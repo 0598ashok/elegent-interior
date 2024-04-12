@@ -63,7 +63,7 @@
   text-transform: capitalize;
 }
 .about_sec4 img {
-  border-right: 1px solid #8a8a8a;
+  /* border-right: 1px solid #8a8a8a; */
 }
 
 .cardss img {
@@ -78,4 +78,37 @@
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.01);
   opacity: calc(1);
+}
+
+.brand_cards {
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all 0.3s ease-in-out;
+  opacity: calc(0.5);
+  cursor: pointer;
+}
+
+.brand_cards:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.01);
+  opacity: calc(1);
+}
+
+.brand_cards img {
+  height: 70px;
+  width: 80%;
+}
+
+
+@media screen and (min-width:0px) and (max-width:768px) {
+  .col_02
+  {
+    display: none;
+  }
 }

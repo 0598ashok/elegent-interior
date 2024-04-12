@@ -28,7 +28,7 @@ code {
   z-index: 1000;
 }
 
-.floating-icons a:hover{
+.floating-icons a:hover {
   text-decoration: none !important;
 }
 .icon {
@@ -107,21 +107,18 @@ code {
   /* Add any other styling for your preloader container */
 }
 
-
-
-
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-.wrapper .loader{
+.wrapper .loader {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
 }
-.loader .loading{
+.loader .loading {
   background: #ff9232;
   width: 30px;
   height: 30px;
@@ -129,22 +126,30 @@ code {
   margin: 0 10px;
   animation: load 0.7s ease infinite;
 }
-.loader .loading.one{
+.loader .loading.one {
   animation-delay: 0.3s;
 }
-.loader .loading.two{
+.loader .loading.two {
   animation-delay: 0.4s;
 }
-.loader .loading.three{
+.loader .loading.three {
   animation-delay: 0.5s;
 }
-@keyframes load{
-  0%{
-      width: 30px;
-      height: 30px;
+@keyframes load {
+  0% {
+    width: 30px;
+    height: 30px;
   }
-  50%{
-      width: 20px;
-      height: 20px;
+  50% {
+    width: 20px;
+    height: 20px;
   }
+}
+
+.owl-carousel {
+    display: block  !important; 
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
 }
